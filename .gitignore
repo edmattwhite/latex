@@ -1,0 +1,5 @@
+# mac specific
+.DS_Store
+
+# don't track builds
+build/
