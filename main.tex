@@ -1,23 +1,51 @@
 \documentclass{tufte-handout}
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{tikz}
+\usepackage{listings}
 
 \title{$p$-Values}
 \author{Ed White}
 \date{}
 
+
+% LISTINGS STYLE
+\lstdefinestyle{code}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    frame=none,
+    numbers=none,
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{purple!40!black},
+    identifierstyle=\color{blue},
+    backgroundcolor=\color{gray!10!white},
+}
+\lstset{style=code}
+
+% CITATION STYLING (VANCOUVER)
+\usepackage{natbib}
+\setcitestyle{numbers}
+
 % THEOREM STYLING
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}
+\newtheorem{qn}{Question}
 \theoremstyle{definition}
 \newtheorem{dfn}{Definition}
 \newtheorem{exm}{Example}
 
 % COMMON COMMANDS
+\newcommand{\rlang}{\textbf{R}}
 \newcommand{\XX}{\mathbf{X}}
+\newcommand{\RR}{\mathbb{R}}
 \newcommand{\prb}[1]{\mathbb{P}\left( #1 \right)}
-\newcommand{\normal}[2]{\mathcal{N}\left( #1, #2 \right)}
+\newcommand{\exn}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\var}[1]{\mathbb{V}\left[ #1 \right]}
+\newcommand{\lik}[1]{\mathcal{L}\left( #1 \right)}
+\newcommand{\dnormal}[2]{\mathcal{N}\left( #1, #2 \right)}
+\newcommand{\dpoisson}[1]{\text{Poisson}\left( #1 \right)}
 
 \begin{document}
 \maketitle
@@ -93,7 +121,7 @@ However, the problem comes when publishing is made conditional on a $p$-value th
 This can't be put in context because anyone performing an experiment and not finding the evidence to support a new hypothesis won't have been incentivised to make that `non-discovery' widely known.
 In this world, none of our scientists have done anything wrong, but an over reliance on the $p$-value as a threshold has led to an undesirable result, and people misunderstanding $p$-values (as some probability of $H_0$ being true) means that what is published is given the wrong interpretation!
 
-\bibliographystyle{plain}
+\bibliographystyle{unsrtnat}
 \bibliography{main}
 
 \end{document}
