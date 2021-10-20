@@ -4,10 +4,13 @@
 \usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\usepackage[shortlabels]{enumitem}
 
 \title{$p$-Values}
-\author{Ed White}
-\date{}
+\author{}
 
 
 % LISTINGS STYLE
@@ -39,6 +42,7 @@
 % COMMON COMMANDS
 \newcommand{\rlang}{\textbf{R}}
 \newcommand{\XX}{\mathbf{X}}
+\newcommand{\YY}{\mathbf{Y}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\idt}{\perp\!\!\!\perp}
 \newcommand{\nidt}{\not\!\perp\!\!\!\perp}
@@ -47,6 +51,7 @@
 \newcommand{\exn}[1]{\mathbb{E}\left[ #1 \right]}
 \newcommand{\var}[1]{\mathbb{V}\left[ #1 \right]}
 \newcommand{\lik}[1]{\mathcal{L}\left( #1 \right)}
+\newcommand{\loglik}[1]{\mathfrak{l}\left( #1 \right)}
 \newcommand{\mle}[1]{\tilde{#1}}
 \newcommand{\unb}[1]{\hat{#1}}
 \newcommand{\dnormal}[2]{\mathcal{N}\left( #1, #2 \right)}
@@ -54,6 +59,12 @@
 \newcommand{\dchisq}[1]{\chi^2_{#1}}
 \newcommand{\dt}[1]{t_{#1}}
 \newcommand{\dF}[2]{F_{#1, #2}}
+
+% FORMATTING
+\setlength{\parskip}{0.75em}
+\renewcommand\vec{\mathbf}
+\floatsep 8pt
+\usepackage[font=footnotesize,labelfont=bf]{caption}
 
 \begin{document}
 \maketitle
